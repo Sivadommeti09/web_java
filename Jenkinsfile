@@ -1,10 +1,10 @@
 pipeline { agent any 
     tools{ 
-        maven "Maven 3.6.3"}
+        image 'maven:3.8.1-adoptopenjdk-11'
         stages { 
             stage('SCM'){
                 steps{
-                    git 'https://github.com/Mahoney0101/spring-petclinic.git'
+                    git 'https://github.com/Sivadommeti09/web_java.git'
                 }
             }
             stage('Build') { 
