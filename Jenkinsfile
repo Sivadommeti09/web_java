@@ -23,12 +23,7 @@ java --version'''
     stage('build with maven') {
       steps {
         sh 'mvn compile test package'
-      }
-    }
-
-    stage('post build steps') {
-      steps {
-        writeFile(file: 'status.txt', text: 'Hey it worked!')
+        sh 'mvn test-compile'
       }
     }
 
